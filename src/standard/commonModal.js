@@ -28,7 +28,7 @@ export default class CommonModal extends Component {
     };
 
     static defaultProps = {
-        textContent: '你好',
+        textContent: 'dialog内容',
         isVisible: false,
     };
 
