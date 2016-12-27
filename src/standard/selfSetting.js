@@ -2,7 +2,15 @@
  * Created by liyang on 16/12/15.
  */
 import React, {Component} from "react";
-import {StyleSheet, Text, View, BackAndroid, Image, TouchableOpacity, Switch} from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    BackAndroid,
+    Image,
+    TouchableOpacity,
+    Switch
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import utils from "../utils/utils";
 import HeadView from "./commonHeadView";
@@ -54,22 +62,22 @@ export default class SettingCenter extends Component {
 
     _onClick = (title, name, callBack, id) => {
         // alert('你店里 ' + title);
-        requestAnimationFrame(()=>{
+        requestAnimationFrame(() => {
             this.toChanged = callBack;
             let {nv} = this.props;
             if (nv) {
                 nv.push({
-                    name: 'modify info',
-                    component: id !== 0 ? ModifyInfo : Mine,
-                    params: {
-                        nv: nv,
-                        title: name,
-                        textHint: title,
-                        lName: title,
-                        id: id,
-                        backInfo: this._getMName
-                    }
-                })
+                            name: 'modify info',
+                            component: id !== 0 ? ModifyInfo : Mine,
+                            params: {
+                                nv: nv,
+                                title: name,
+                                textHint: title,
+                                lName: title,
+                                id: id,
+                                backInfo: this._getMName
+                            }
+                        })
             }
         });
 

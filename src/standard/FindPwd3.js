@@ -2,7 +2,16 @@
  * Created by song on 16/11/25.
  */
 import React, {Component} from "react";
-import {View, Text, BackAndroid, StyleSheet, Dimensions, TextInput, PixelRatio, TouchableOpacity} from "react-native";
+import {
+    View,
+    Text,
+    BackAndroid,
+    StyleSheet,
+    Dimensions,
+    TextInput,
+    PixelRatio,
+    TouchableOpacity
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import HeadView from "./commonHeadView";
 import utils from "../utils/utils";
@@ -51,22 +60,22 @@ export default class FindPwd3 extends Component {
         let {nv} = this.props;
         if (nv) {
             nv.push({
-                name: 'find pwd3',
-                component: FindPwd4,
-                params: {
-                    name: 'first pwd3',
-                    nv: nv
-                }
-            })
+                        name: 'find pwd3',
+                        component: FindPwd4,
+                        params: {
+                            name: 'first pwd3',
+                            nv: nv
+                        }
+                    })
         }
     };
 
     _getIdentify = () => {
         let count = 10;
         this.setState({
-            showHint: true,
-            hintText: 10
-        });
+                          showHint: true,
+                          hintText: 10
+                      });
 
         this.timer = setInterval(() => {
             count--;
@@ -95,7 +104,7 @@ export default class FindPwd3 extends Component {
                     <View style={{flex: 1, flexDirection: 'column',margin:utils.dp2px(94),}}>
 
                         {this.state.showHint &&
-                        <Text style={{marginBottom: utils.dp2px(54),alignSelf: 'center'}}>已经向您的手机发送验证码</Text>}
+                         <Text style={{marginBottom: utils.dp2px(54),alignSelf: 'center'}}>已经向您的手机发送验证码</Text>}
                         <View style={{flexDirection: 'row', height: BaseStyles._base_btn_dx_height}}>
                             <View style={{alignItems: 'center',justifyContent: 'center'}}>
                                 <Text style={[styles.font, {
@@ -117,12 +126,12 @@ export default class FindPwd3 extends Component {
                         <View style={{backgroundColor: '#d9d9d9', height: 1}}/>
 
                         {/*<View style={{flexDirection: 'row'}}>*/}
-                            {/*<TouchableOpacity*/}
-                                {/*onPress={this._toPwd4}*/}
-                                {/*style={[{flex:1,marginTop:BaseStyles._base_btn_dx_height},BaseStyles.views._btn_common]}>*/}
-                                {/*<Text*/}
-                                    {/*style={BaseStyles.views._common_text}>下一步</Text>*/}
-                            {/*</TouchableOpacity>*/}
+                        {/*<TouchableOpacity*/}
+                        {/*onPress={this._toPwd4}*/}
+                        {/*style={[{flex:1,marginTop:BaseStyles._base_btn_dx_height},BaseStyles.views._btn_common]}>*/}
+                        {/*<Text*/}
+                        {/*style={BaseStyles.views._common_text}>下一步</Text>*/}
+                        {/*</TouchableOpacity>*/}
                         {/*</View>*/}
 
                         <View style={{marginTop:BaseStyles._base_btn_dx_height}}>
@@ -139,27 +148,27 @@ export default class FindPwd3 extends Component {
 }
 const
     styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            backgroundColor: 'white'
-        },
-        top: {
-            flex: 3,
-            alignSelf: 'center',
-            width: 50,
-            height: 50,
+                                   container: {
+                                       flex: 1,
+                                       backgroundColor: 'white'
+                                   },
+                                   top: {
+                                       flex: 3,
+                                       alignSelf: 'center',
+                                       width: 50,
+                                       height: 50,
 
-        },
-        center: {
-            flex: 3,
-            // backgroundColor: 'gray'
-        },
-        foot: {
-            flex: 3,
-            // backgroundColor: 'green'
-        },
-        font: {
-            fontSize: BaseStyles._base_text_px_size,
-        }
+                                   },
+                                   center: {
+                                       flex: 3,
+                                       // backgroundColor: 'gray'
+                                   },
+                                   foot: {
+                                       flex: 3,
+                                       // backgroundColor: 'green'
+                                   },
+                                   font: {
+                                       fontSize: BaseStyles._base_text_px_size,
+                                   }
 
-    });
+                               });

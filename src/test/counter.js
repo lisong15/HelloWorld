@@ -2,14 +2,19 @@
  * Created by liyang on 16/12/22.
  */
 import React, {Component} from "react";
-import {StyleSheet, View, Text, TouchableHighlight} from "react-native";
-import { observer } from 'mobx-react/native';
-import { observable } from 'mobx';
+import {
+    StyleSheet,
+    View,
+    Text,
+    TouchableHighlight
+} from "react-native";
+import {observer} from "mobx-react/native";
+import {observable} from "mobx";
 
 // 被观察者, 观察 counter 变量
 const storer = observable({
-    counter: 0
-});
+                              counter: 0
+                          });
 
 //---------------------------------
 // ES6 写法: Arrow Function
@@ -68,12 +73,12 @@ export default class ReactionsComponent extends Component {
 
 /* 样式定义 */
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        justifyContent: 'space-around'
-    },
-    resultTxtStyle: {
-        fontSize: 22,
-        color: 'red'
-    }
-});
+                                     container: {
+                                         flexDirection: 'row',
+                                         justifyContent: 'space-around'
+                                     },
+                                     resultTxtStyle: {
+                                         fontSize: 22,
+                                         color: 'red'
+                                     }
+                                 });

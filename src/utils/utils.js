@@ -1,7 +1,10 @@
 /**
  * Created by liyang on 16/12/2.
  */
-import {PixelRatio, Dimensions} from "react-native";
+import {
+    PixelRatio,
+    Dimensions
+} from "react-native";
 /**
  * 根据屏幕密度换算成px
  * @param dp
@@ -42,4 +45,8 @@ onBack = (nav, info) => {
 };
 
 
-export default {dp2px, onBack, getWH}
+export default {
+    dp2px,
+    onBack,
+    getWH
+}

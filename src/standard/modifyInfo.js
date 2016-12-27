@@ -2,7 +2,14 @@
  * Created by liyang on 16/12/16.
  */
 import React, {Component} from "react";
-import {Text, View, TextInput, Image, TouchableOpacity, BackAndroid} from "react-native";
+import {
+    Text,
+    View,
+    TextInput,
+    Image,
+    TouchableOpacity,
+    BackAndroid
+} from "react-native";
 import utils from "../utils/utils";
 import HeadView from "./commonHeadView";
 import EditBox from "./ceditInfo";
@@ -26,7 +33,8 @@ export default class ModifyInfo extends Component {
     _onBack = () => {
         console.log(`ModifyInfo _onBack back:in oooo ${this.resultText}`);
         if (this.resultText == '') {
-            this.resultText = this.props.nv.getCurrentRoutes()[this.props.nv.getCurrentRoutes().length - 1].params.textHint;
+            this.resultText =
+                this.props.nv.getCurrentRoutes()[this.props.nv.getCurrentRoutes().length - 1].params.textHint;
         }
         utils.onBack(this.props.nv, this.resultText);
         resultText = '';

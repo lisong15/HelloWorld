@@ -1,13 +1,15 @@
 /**
  * Created by liyang on 16/12/5.
  */
-import React, {Component, Navigator} from 'react-native';
-import {connect} from 'react-redux';
-import Router from './configs/router';
-import {skipLogin, asyncSkipLogin} from './actions/user';
-
-import LoginPage from './pages/login';
-import MainPage from './pages/main';
+import React, {
+    Component,
+    Navigator
+} from "react-native";
+import {connect} from "react-redux";
+import Router from "./configs/router";
+import {asyncSkipLogin} from "./actions/user";
+import LoginPage from "./pages/login";
+import MainPage from "./pages/main";
 
 let initialRoute = {
     name: 'login-page',
@@ -34,7 +36,9 @@ class Root extends Component {
                 router: this.router,
                 name,
                 route: {
-                    name, id, index
+                    name,
+                    id,
+                    index
                 }
             })
         }

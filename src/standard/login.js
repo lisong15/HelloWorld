@@ -3,10 +3,26 @@
  */
 import React, {Component} from "react";
 import {
-    View, StyleSheet, Text, TextInput, Image, TouchableHighlight, Dimensions, Alert, Platform, Linking, Navigator,
-    TouchableOpacity, PixelRatio
+    View,
+    StyleSheet,
+    Text,
+    TextInput,
+    Image,
+    TouchableHighlight,
+    Dimensions,
+    Alert,
+    Platform,
+    Linking,
+    Navigator,
+    TouchableOpacity,
+    PixelRatio
 } from "react-native";
-import {checkUpdate, downloadUpdate, switchVersion, switchVersionLater} from "react-native-update";
+import {
+    checkUpdate,
+    downloadUpdate,
+    switchVersion,
+    switchVersionLater
+} from "react-native-update";
 import BaseStyles from "../styles/styles";
 import toast from "../native_utils/AToast";
 import HeadView from "./commonHeadView";
@@ -17,7 +33,6 @@ import register from "./ToRegisterPage";
 import findPwd from "./FindPwd";
 import Scenter from "./selfSetting";
 import Button from "./Button";
-import Counter from "../test/counter";
 
 // const {appKey} = _updateConfig[Platform.android];
 const appKey = "WRgXR6In4SEen-UtiLJpesunKGwYpWnV";
@@ -38,15 +53,17 @@ export default class LoginClass extends Component {
         downloadUpdate(info).then(hash => {
             Alert.alert('提示', '下载完毕,是否重启应用?', [
                 {
-                    text: '是', onPress: () => {
-                    switchVersion(hash);
-                }
+                    text: '是',
+                    onPress: () => {
+                        switchVersion(hash);
+                    }
                 },
                 {text: '否',},
                 {
-                    text: '下次启动时', onPress: () => {
-                    switchVersionLater(hash);
-                }
+                    text: '下次启动时',
+                    onPress: () => {
+                        switchVersionLater(hash);
+                    }
                 },
             ]);
         }).catch(err => {
@@ -76,14 +93,14 @@ export default class LoginClass extends Component {
         let {navigator} = this.props;
         if (navigator) {
             navigator.push({
-                name: 'setting',
-                component: Scenter,
-                customAnimation: Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft,
-                params: {
-                    name: 'tom',
-                    nv: navigator
-                }
-            })
+                               name: 'setting',
+                               component: Scenter,
+                               customAnimation: Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft,
+                               params: {
+                                   name: 'tom',
+                                   nv: navigator
+                               }
+                           })
         }
 
     };
@@ -93,14 +110,14 @@ export default class LoginClass extends Component {
         let {navigator} = this.props;
         if (navigator) {
             navigator.push({
-                name: 'find pwd',
-                component: findPwd,
-                customAnimation: Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft,
-                params: {
-                    name: 'tom',
-                    nv: navigator
-                }
-            })
+                               name: 'find pwd',
+                               component: findPwd,
+                               customAnimation: Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft,
+                               params: {
+                                   name: 'tom',
+                                   nv: navigator
+                               }
+                           })
         }
     };
     _register = () => {
@@ -108,15 +125,15 @@ export default class LoginClass extends Component {
         let {navigator} = this.props;
         if (navigator) {
             navigator.push({
-                name: 'register pages',
-                component: register,
-                customAnimation: Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft,
-                params: {
-                    nm: 'from login',
-                    dp: 'this is the dp from login page',
-                    nv: navigator
-                }
-            })
+                               name: 'register pages',
+                               component: register,
+                               customAnimation: Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft,
+                               params: {
+                                   nm: 'from login',
+                                   dp: 'this is the dp from login page',
+                                   nv: navigator
+                               }
+                           })
         }
     };
     _checkUp = () => {
@@ -130,10 +147,16 @@ export default class LoginClass extends Component {
             else {
                 // toast.show('检查到新的版本' + info.name + ',是否下载?\n' + info.description, toast.SHORT);
                 Alert.alert('这是', '检查到新的版本' + info.name + ',是否下载?\n' + info.description,
-                    [
-                        {text: 'options 1', onPress: this._optionOne},
-                        {text: 'options 2', onPress: this._optionTwo(info)},
-                    ]);
+                            [
+                                {
+                                    text: 'options 1',
+                                    onPress: this._optionOne
+                                },
+                                {
+                                    text: 'options 2',
+                                    onPress: this._optionTwo(info)
+                                },
+                            ]);
             }
         }).catch(err => {
         });
@@ -213,27 +236,27 @@ export default class LoginClass extends Component {
 
 const
     styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            backgroundColor: 'white'
-        },
-        top: {
-            flex: 3,
-            alignSelf: 'center',
-            width: 50,
-            height: 50,
+                                   container: {
+                                       flex: 1,
+                                       backgroundColor: 'white'
+                                   },
+                                   top: {
+                                       flex: 3,
+                                       alignSelf: 'center',
+                                       width: 50,
+                                       height: 50,
 
-        },
-        center: {
-            flex: 3,
-            // backgroundColor: 'gray'
-        },
-        foot: {
-            flex: 3,
-            // backgroundColor: 'green'
-        },
-        font: {
-            fontSize: BaseStyles._base_text_px_size,
-        }
+                                   },
+                                   center: {
+                                       flex: 3,
+                                       // backgroundColor: 'gray'
+                                   },
+                                   foot: {
+                                       flex: 3,
+                                       // backgroundColor: 'green'
+                                   },
+                                   font: {
+                                       fontSize: BaseStyles._base_text_px_size,
+                                   }
 
-    });
+                               });

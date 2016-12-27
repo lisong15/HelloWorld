@@ -1,8 +1,7 @@
 /**
  * Created by liyang on 16/12/5.
  */
-
-import * as TYPES from '../actions/types';
+import * as TYPES from "../actions/types";
 
 const initialState = {
     isLoggedIn: false,

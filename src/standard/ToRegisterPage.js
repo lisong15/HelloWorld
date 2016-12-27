@@ -2,7 +2,16 @@
  * Created by song on 16/11/25.
  */
 import React, {Component} from "react";
-import {View, Text, BackAndroid, StyleSheet, Dimensions, TextInput, PixelRatio, TouchableOpacity} from "react-native";
+import {
+    View,
+    Text,
+    BackAndroid,
+    StyleSheet,
+    Dimensions,
+    TextInput,
+    PixelRatio,
+    TouchableOpacity
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import utils from "../utils/utils";
 import HeadView from "./commonHeadView";
@@ -46,8 +55,8 @@ export default class RegisterPage extends Component {
     _getIdentify = () => {
         let count = 10;
         this.setState({
-            hintText: 10
-        });
+                          hintText: 10
+                      });
 
         this.timer = setInterval(() => {
             count--;
@@ -149,27 +158,27 @@ export default class RegisterPage extends Component {
 }
 const
     styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            backgroundColor: 'white'
-        },
-        top: {
-            flex: 3,
-            alignSelf: 'center',
-            width: 50,
-            height: 50,
+                                   container: {
+                                       flex: 1,
+                                       backgroundColor: 'white'
+                                   },
+                                   top: {
+                                       flex: 3,
+                                       alignSelf: 'center',
+                                       width: 50,
+                                       height: 50,
 
-        },
-        center: {
-            flex: 3,
-            // backgroundColor: 'gray'
-        },
-        foot: {
-            flex: 3,
-            // backgroundColor: 'green'
-        },
-        font: {
-            fontSize: BaseStyles._base_text_px_size,
-        }
+                                   },
+                                   center: {
+                                       flex: 3,
+                                       // backgroundColor: 'gray'
+                                   },
+                                   foot: {
+                                       flex: 3,
+                                       // backgroundColor: 'green'
+                                   },
+                                   font: {
+                                       fontSize: BaseStyles._base_text_px_size,
+                                   }
 
-    });
+                               });

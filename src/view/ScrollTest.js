@@ -1,5 +1,13 @@
 import React, {Component} from "react";
-import {AppRegistry, StyleSheet, Text, View, Navigator, ScrollView, RefreshControl} from "react-native";
+import {
+    AppRegistry,
+    StyleSheet,
+    Text,
+    View,
+    Navigator,
+    ScrollView,
+    RefreshControl
+} from "react-native";
 
 // 视图
 
@@ -19,17 +27,17 @@ export default class CustomScrollView extends Component {
         setTimeout(() => {
             // prepend 10 items
             const rowData = Array.from(new Array(10))
-                .map((val, i) => ({
-                    text: 'Loaded row ' + (+this.state.loaded + i),
-                    clicks: 0,
-                }))
-                .concat(this.state.rowData);
+                                 .map((val, i) => ({
+                                     text: 'Loaded row ' + (+this.state.loaded + i),
+                                     clicks: 0,
+                                 }))
+                                 .concat(this.state.rowData);
 
             this.setState({
-                loaded: this.state.loaded + 10,
-                isRefreshing: false,
-                rowData: rowData,
-            });
+                              loaded: this.state.loaded + 10,
+                              isRefreshing: false,
+                              rowData: rowData,
+                          });
         }, 5000);
     }
 
@@ -72,14 +80,14 @@ export default class CustomScrollView extends Component {
 }
 // 样式
 let styles = StyleSheet.create({
-    scrollViewStyle: {
-        // 背景色
-        backgroundColor: 'red'
-    },
+                                   scrollViewStyle: {
+                                       // 背景色
+                                       backgroundColor: 'red'
+                                   },
 
-    itemStyle: {
-        // 尺寸
-        width: 1000,
-        height: 200
-    },
-});
+                                   itemStyle: {
+                                       // 尺寸
+                                       width: 1000,
+                                       height: 200
+                                   },
+                               });

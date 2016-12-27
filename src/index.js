@@ -1,15 +1,12 @@
 /**
  * Created by liyang on 16/12/5.
  */
-
-import React, {Component} from 'react-native';
-import {Provider} from 'react-redux';
-
-import configureStore from './store/index';
+import React, {Component} from "react-native";
+import {Provider} from "react-redux";
+import configureStore from "./store/index";
+import Root from "./root";
 
 let store = configureStore();
-
-import Root from './root';
 
 
 export default class App extends Component {

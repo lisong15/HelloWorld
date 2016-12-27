@@ -1,5 +1,8 @@
-import {PropTypes} from 'react';
-import {requireNativeComponent, View} from 'react-native';
+import {PropTypes} from "react";
+import {
+    requireNativeComponent,
+    View
+} from "react-native";
 
 var iface = {
     name: 'ImageView',

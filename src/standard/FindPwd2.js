@@ -2,7 +2,16 @@
  * Created by liyang on 16/12/2.
  */
 import React, {Component} from "react";
-import {View, Text, BackAndroid, StyleSheet, Dimensions, TextInput, PixelRatio, TouchableOpacity} from "react-native";
+import {
+    View,
+    Text,
+    BackAndroid,
+    StyleSheet,
+    Dimensions,
+    TextInput,
+    PixelRatio,
+    TouchableOpacity
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import HeadView from "./commonHeadView";
 import utils from "../utils/utils";
@@ -49,13 +58,13 @@ export default class FindPwd2 extends Component {
         let {nv} = this.props;
         if (nv) {
             nv.push({
-                name: 'find pwd2',
-                component: FindPwd3,
-                params: {
-                    name: 'first pwd2',
-                    nv: nv
-                }
-            })
+                        name: 'find pwd2',
+                        component: FindPwd3,
+                        params: {
+                            name: 'first pwd2',
+                            nv: nv
+                        }
+                    })
         }
     };
 
@@ -67,8 +76,8 @@ export default class FindPwd2 extends Component {
     _check_callback = (abc) => {
         // alert('return result: ' + abc)
         this.setState({
-            flag: abc
-        });
+                          flag: abc
+                      });
         if (abc === 1) {
             alert(`你选择了第一种方式`);
             return;
@@ -116,10 +125,10 @@ export default class FindPwd2 extends Component {
 
                     {/*<View style={{flexDirection: 'row'}}>*/}
                     {/*<TouchableOpacity*/}
-                        {/*onPress={this._toPwd3}*/}
-                        {/*style={[{marginTop:BaseStyles._base_btn_dx_height},BaseStyles.views._btn_common]}>*/}
-                        {/*<Text*/}
-                            {/*style={BaseStyles.views._common_text}>下一步</Text>*/}
+                    {/*onPress={this._toPwd3}*/}
+                    {/*style={[{marginTop:BaseStyles._base_btn_dx_height},BaseStyles.views._btn_common]}>*/}
+                    {/*<Text*/}
+                    {/*style={BaseStyles.views._common_text}>下一步</Text>*/}
                     {/*</TouchableOpacity>*/}
 
                     <View style={{marginTop:BaseStyles._base_btn_dx_height}}>

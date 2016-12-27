@@ -2,7 +2,15 @@
  * Created by liyang on 16/12/15.
  */
 import React, {Component} from "react";
-import {StyleSheet, Text, View, BackAndroid, Image, TouchableOpacity, Switch} from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    BackAndroid,
+    Image,
+    TouchableOpacity,
+    Switch
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import utils from "../utils/utils";
 import HeadView from "./commonHeadView";
@@ -60,17 +68,17 @@ export default class MineSetting extends Component {
         let {nv} = this.props;
         if (nv) {
             nv.push({
-                name: 'modify info',
-                component: ModifyInfo,
-                params: {
-                    nv: nv,
-                    title: name,
-                    textHint: title,
-                    lName: title,
-                    id: id,
-                    backInfo: this._getMName
-                }
-            })
+                        name: 'modify info',
+                        component: ModifyInfo,
+                        params: {
+                            nv: nv,
+                            title: name,
+                            textHint: title,
+                            lName: title,
+                            id: id,
+                            backInfo: this._getMName
+                        }
+                    })
         }
     };
 
@@ -139,8 +147,8 @@ export default class MineSetting extends Component {
                 </View>
                 <View style={{backgroundColor: '#d9d9d9', height: 1}}/>
                 {this.state.modal &&
-                <MyModal leftBtnText="取消" rightBtnText="hh" textContent="这是标题" leftOnClick={this._onLeftClick}
-                         rightOnClick={this._onRightClick}/>}
+                 <MyModal leftBtnText="取消" rightBtnText="hh" textContent="这是标题" leftOnClick={this._onLeftClick}
+                          rightOnClick={this._onRightClick}/>}
             </View>
         </View>)
     }

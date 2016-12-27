@@ -149,6 +149,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.facebook.react:react-native:+'
     compile 'com.blankj:utilcode:+'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.5'
     // From node_modules
 }
 

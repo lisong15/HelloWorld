@@ -1,15 +1,24 @@
 /**
  * Created by liyang on 16/12/5.
  */
-import {applyMiddleware, createStore} from 'redux';
-import thunk from 'redux-thunk';
-import {persistStore, autoRehydrate} from 'redux-persist';
-import {AsyncStorage} from 'react-native';
-import reducers from '../reducers';
+import {
+    applyMiddleware,
+    createStore
+} from "redux";
+import thunk from "redux-thunk";
+import {
+    persistStore,
+    autoRehydrate
+} from "redux-persist";
+import {AsyncStorage} from "react-native";
+import reducers from "../reducers";
 
 const logger = store => next => action => {
-    if(typeof action === 'function') console.log('dispatching a function');
-    else console.log('dispatching', action);
+    if (typeof action === 'function') {
+        console.log('dispatching a function');
+    } else {
+        console.log('dispatching', action);
+    }
     let result = next(action);
     console.log('next state', store.getState());
     return result;
@@ -23,7 +32,7 @@ let middlewares = [
 let createAppStore = applyMiddleware(...middlewares)(createStore);
 
 
-export default function configureStore(onComplete: ()=>void){
+export default function configureStore(onComplete: ()=>void) {
     const store = autoRehydrate()(createAppStore)(reducers);
     let opt = {
         storage: AsyncStorage,

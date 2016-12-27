@@ -2,7 +2,12 @@
  * Created by liyang on 16/12/8.
  */
 import React, {Component} from "react";
-import {View, Text, TouchableOpacity, TabBarIOS} from "react-native";
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    TabBarIOS
+} from "react-native";
 
 let state = 0;//1选中，0未选中
 let default_radius = 25;
@@ -29,8 +34,8 @@ export default class CircleBox extends Component {
     componentWillMount() {
 
         this.setState({
-            radius: this.props.radius,
-        });
+                          radius: this.props.radius,
+                      });
     }
 
     render() {

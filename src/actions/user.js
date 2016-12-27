@@ -1,8 +1,8 @@
 /**
  * Created by liyang on 16/12/5.
  */
-import {Alert} from 'react-native';
-import * as TYPES from './types';
+import {Alert} from "react-native";
+import * as TYPES from "./types";
 
 let testUser = {
     'name': 'juju',
@@ -22,10 +22,16 @@ export function login(opt) {
         dispatch({'type': TYPES.LOGGED_DOING});
         let inner_get = fetch('http://www.baidu.com')
             .then((res) => {
-                dispatch({'type': TYPES.LOGGED_IN, user: testUser});
+                dispatch({
+                             'type': TYPES.LOGGED_IN,
+                             user: testUser
+                         });
             }).catch((e) => {
                 AlertIOS.alert(e.message);
-                dispatch({'type': TYPES.LOGGED_ERROR, error: e});
+                dispatch({
+                             'type': TYPES.LOGGED_ERROR,
+                             error: e
+                         });
             });
     }
 }

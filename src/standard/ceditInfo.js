@@ -2,7 +2,14 @@
  * Created by liyang on 16/12/15.
  */
 import React, {Component} from "react";
-import {Text, View, TextInput, Image, TouchableOpacity, BackAndroid} from "react-native";
+import {
+    Text,
+    View,
+    TextInput,
+    Image,
+    TouchableOpacity,
+    BackAndroid
+} from "react-native";
 import utils from "../utils/utils";
 import baseStyles from "../styles/styles";
 export default class EditInfo extends Component {
@@ -24,11 +31,11 @@ export default class EditInfo extends Component {
         BackAndroid.addEventListener('hardwareBackPress', this._onBackPressed);
         let {text, textHint = this.state.textHint, height = this.defaultHeight, lName} = this.props;
         this.setState({
-            text: text,
-            textHint: textHint,
-            height: height,
-            name: lName
-        })
+                          text: text,
+                          textHint: textHint,
+                          height: height,
+                          name: lName
+                      })
     }
 
     componentWillUnmount() {
@@ -54,16 +61,16 @@ export default class EditInfo extends Component {
         let {textChanged} = this.props;
         textChanged(text);
         this.setState({
-            text: text
-        });
+                          text: text
+                      });
     };
 
 
     _onDeleteAll = () => {
         this.setState({
-            textHint: '',
-            text: ''
-        });
+                          textHint: '',
+                          text: ''
+                      });
         console.log('textHint: ' + this.state.textHint);
     };
 

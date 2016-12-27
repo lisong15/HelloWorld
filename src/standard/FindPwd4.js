@@ -2,7 +2,16 @@
  * Created by liyang on 16/12/2.
  */
 import React, {Component} from "react";
-import {View, Text, BackAndroid, StyleSheet, Dimensions, TextInput, PixelRatio, TouchableOpacity} from "react-native";
+import {
+    View,
+    Text,
+    BackAndroid,
+    StyleSheet,
+    Dimensions,
+    TextInput,
+    PixelRatio,
+    TouchableOpacity
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import HeadView from "./commonHeadView";
 import utils from "../utils/utils";

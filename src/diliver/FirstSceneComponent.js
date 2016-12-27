@@ -8,10 +8,9 @@ import {
     TouchableOpacity,
     Image,
     Button,
-    ScrollView,
+    ScrollView
 } from "react-native";
 import ttt from "../native_utils/AToast";
-import SecondSceneComponent from "./SecondSceneComponent";
 
 export default class FirstSceneComponent extends Component {
 
@@ -32,8 +31,8 @@ export default class FirstSceneComponent extends Component {
         // this.state.id=3;
         // this.setState(this.state);
         _this.setState({
-            user: user
-        });
+                           user: user
+                       });
         alert(_this.state.id);
     };
 
@@ -44,7 +43,8 @@ export default class FirstSceneComponent extends Component {
                 time
             } = await ttt.show('heheheh', ttt.SHORT);
             console.log(`收到的信息是：${msg} -> ${time}`);
-        } catch (e) {
+        }
+        catch (e) {
             console.error(e);
         }
 

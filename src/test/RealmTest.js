@@ -1,10 +1,14 @@
 /**
  * Created by liyang on 16/12/1.
  */
-import React, {Component} from 'react';
-import {View, TouchableHighlight, Text, StyleSheet} from 'react-native';
-
-import user from './UserBeans';
+import React, {Component} from "react";
+import {
+    View,
+    TouchableHighlight,
+    Text,
+    StyleSheet
+} from "react-native";
+import user from "./UserBeans";
 export default class RealmT extends Component {
     // 构造
     constructor(props) {
@@ -28,8 +32,8 @@ export default class RealmT extends Component {
 }
 
 const style = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'yellow'
-    }
-});
+                                    container: {
+                                        flex: 1,
+                                        backgroundColor: 'yellow'
+                                    }
+                                });

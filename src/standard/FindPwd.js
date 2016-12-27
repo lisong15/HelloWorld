@@ -2,7 +2,16 @@
  * Created by liyang on 16/12/2.
  */
 import React, {Component} from "react";
-import {View, Text, BackAndroid, StyleSheet, Dimensions, TextInput, PixelRatio, TouchableOpacity} from "react-native";
+import {
+    View,
+    Text,
+    BackAndroid,
+    StyleSheet,
+    Dimensions,
+    TextInput,
+    PixelRatio,
+    TouchableOpacity
+} from "react-native";
 import BaseStyles from "../styles/styles";
 import HeadView from "./commonHeadView";
 import utils from "../utils/utils";
@@ -45,13 +54,13 @@ export default class FindPwd extends Component {
         let {nv} = this.props;
         if (nv) {
             nv.push({
-                name: 'find pwd',
-                component: FindPwd2,
-                params: {
-                    name: 'first pwd',
-                    nv: nv
-                }
-            })
+                        name: 'find pwd',
+                        component: FindPwd2,
+                        params: {
+                            name: 'first pwd',
+                            nv: nv
+                        }
+                    })
         }
     };
 
@@ -82,10 +91,10 @@ export default class FindPwd extends Component {
                     <View style={{backgroundColor: '#d9d9d9', height: 1}}/>
                     {/*<View style={{flexDirection: 'row'}}>*/}
                     {/*<TouchableOpacity*/}
-                        {/*onPress={this._toPwd2}*/}
-                        {/*style={[{marginTop:BaseStyles._base_btn_dx_height},BaseStyles.views._btn_common]}>*/}
-                        {/*<Text*/}
-                            {/*style={BaseStyles.views._common_text}>下一步</Text>*/}
+                    {/*onPress={this._toPwd2}*/}
+                    {/*style={[{marginTop:BaseStyles._base_btn_dx_height},BaseStyles.views._btn_common]}>*/}
+                    {/*<Text*/}
+                    {/*style={BaseStyles.views._common_text}>下一步</Text>*/}
                     {/*</TouchableOpacity>*/}
                     <View style={{marginTop:BaseStyles._base_btn_dx_height}}>
                         <Button btntext="下一步" onBtnClick={this._toPwd2} btnHeight={48}

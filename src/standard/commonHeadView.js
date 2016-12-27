@@ -2,11 +2,18 @@
  * Created by song on 2016/11/17.
  */
 import React, {Component} from "react";
-import {StyleSheet, Text, View, Dimensions, Image, TouchableOpacity} from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    Dimensions,
+    Image,
+    TouchableOpacity
+} from "react-native";
 import base_styles from "../styles/styles";
 export default class BaseHeaderView extends Component {
 
-// 构造
+    // 构造
     constructor(props) {
         super(props);
         // 初始状态

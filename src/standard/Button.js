@@ -2,7 +2,14 @@
  * Created by liyang on 16/12/21.
  */
 import React, {Component} from "react";
-import {Text, View, TextInput, Image, TouchableOpacity, BackAndroid} from "react-native";
+import {
+    Text,
+    View,
+    TextInput,
+    Image,
+    TouchableOpacity,
+    BackAndroid
+} from "react-native";
 import utils from "../utils/utils";
 import BaseStyles from "../styles/styles";
 
